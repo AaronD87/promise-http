@@ -26,6 +26,10 @@ describe('rick and morty service', () => {
           'Antenna Rick',
           'Ants in my Eyes Johnson'
         ]);
+
+        expect(characters[3]).toEqual('Beth Smith');
+
+        expect(characters).toHaveLength(20);
       });
   });
 });
