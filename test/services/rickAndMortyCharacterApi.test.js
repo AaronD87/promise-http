@@ -4,6 +4,7 @@ describe('rick and morty service', () => {
   it('gets a list of characters', () => {
     return getCharacters()
       .then(characters => {
+        console.log('characters', characters);
         expect(characters).toEqual([
           'Rick Sanchez',
           'Morty Smith',
