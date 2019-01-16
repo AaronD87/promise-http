@@ -9,6 +9,8 @@ const removeCapitals = str => {
     .join('');
 };
 
+const read = src => fsPromises.readFile(src, { encoding: 'utf8' });
+
 const makeAllLettersCapital = str => str.toUpperCase();
 
 const reverse = str => str.split('').reverse().join('');
@@ -16,7 +18,7 @@ const reverse = str => str.split('').reverse().join('');
 const trim = str => str.trim();
 
 const transformer = src => {
-  return fsPromises.readFile(src)
+  return read(src)
     .then(removeCapitals)
     .then(makeAllLettersCapital)
     .then(reverse)

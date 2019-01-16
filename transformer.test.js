@@ -4,7 +4,7 @@ const {
 } = require('./transformer');
 
 describe('transformer', () => {
-  it.only('transforms some file', () => {
+  it('transforms a file', () => {
     return transformer('./transform.txt')
       .then(transformTxt => {
         expect(transformTxt).toEqual('EREH I');
