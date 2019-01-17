@@ -26,7 +26,7 @@ describe('app', () => {
     return request(app)
       .get('/characters/')
       .then(res => {
-        expect(res.text).toEqual('<html><body><h3>Rick SanchezAliveHuman</h3></h1></body></html>');
+        expect(res.text).toEqual('<html><body><h3>Rick Sanchez</h3><h3>Alive</h3><h3>Human</h3></h1></body></html>');
       });
   });
 });
