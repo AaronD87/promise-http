@@ -13,12 +13,12 @@ describe('app', () => {
       });
   });
 
-  it('saves a note to a character', () => {
+  it.only('saves a note to a character', () => {
     return request(app)
       .post('/characters')
       .send({ characterId: 1, note: 'Terrible character' })
       .then(res => {
-        expect(res.status).toEqual(204);
+        expect(res.statusCode).toEqual(204);
       });
   });
 
